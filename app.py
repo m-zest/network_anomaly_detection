@@ -1,44 +1,48 @@
-from flask import Flask, render_template, request, jsonify
 import joblib
-import numpy as np
+import pandas as pd
+from flask import Flask, request, render_template
+from sklearn.preprocessing import StandardScaler
 
-# Initialize Flask app
+# Initialize the Flask app
 app = Flask(__name__)
 
-# Load the trained model and scaler
+# Load the model and scaler
 model = joblib.load('model/network_anomaly_model.pkl')
 scaler = joblib.load('model/scaler.pkl')
 
 @app.route('/')
 def home():
-    return render_template('index.html', template_folder='./')
-
+    return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
-        # Get input from the form
-        sport = float(request.form['sport'])
-        dport = float(request.form['dport'])
-        proto = float(request.form['proto'])
-        state = float(request.form['state'])
+        # Retrieve the form data
+        sport = int(request.form['sport'])
+        dport = int(request.form['dport'])
+        proto = int(request.form['proto'])
+        state = int(request.form['state'])
         dur = float(request.form['dur'])
-        sbytes = float(request.form['sbytes'])
-        spkts = float(request.form['spkts'])
+        sbytes = int(request.form['sbytes'])
+        spkts = int(request.form['spkts'])
 
-        # Prepare features for prediction
-        features = np.array([[sport, dport, proto, state, dur, sbytes, spkts]])
+        # Create a DataFrame from the input
+        data = pd.DataFrame([[sport, dport, proto, state, dur, sbytes, spkts]], 
+                            columns=['sport', 'dport', 'proto', 'state', 'dur', 'sbytes', 'spkts'])
 
-        # Scale the features
-        scaled_features = scaler.transform(features)
+        # Scale the data using the loaded scaler
+        data_scaled = scaler.transform(data)
 
-        # Make prediction
-        prediction = model.predict(scaled_features)
+        # Make a prediction using the model
+        prediction = model.predict(data_scaled)
 
-        return render_template('index.html', prediction_text=f'Prediction: {prediction[0]}')
-
+        # Display prediction results
+        prediction_text = f"Prediction: {prediction[0]}"  # Prediction will be 0 or 1
+        return render_template('index.html', prediction_text=prediction_text)
+    
     except Exception as e:
-        return render_template('index.html', prediction_text=f'Error: {e}')
+        return f"Error: {e}"
 
+# Run the app (only needed locally)
 if __name__ == "__main__":
     app.run(debug=True)

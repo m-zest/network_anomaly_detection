@@ -1,5 +1,5 @@
-flask
+Flask
+scikit-learn
 joblib
+pandas
 numpy
-
-
