@@ -10,8 +10,9 @@ model = joblib.load('model/network_anomaly_model.pkl')
 scaler = joblib.load('model/scaler.pkl')
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('index.html', template_folder='./')
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
