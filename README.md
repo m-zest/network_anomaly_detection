@@ -15,8 +15,8 @@ Before running the application, make sure you have the following installed:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/yourrepositoryname.git
-   cd yourrepositoryname
+   git clone https://github.com/m-zest/network_anomaly_detection.git
+   cd network_anomaly_detection
    ```
 
 2. Create a virtual environment (optional but recommended):
