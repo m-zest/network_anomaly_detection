@@ -168,5 +168,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 4. **Model Prediction**: The `/predict` endpoint expects JSON with traffic features and returns the predicted class.
 5. **Postman and curl**: Provides specific steps and examples to test the API via Postman or command-line `curl`.
 
-Let me know if you need further modifications or have additional questions!
+
 ```
