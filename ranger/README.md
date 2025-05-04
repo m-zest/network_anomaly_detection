@@ -52,8 +52,8 @@ as well as the accuracy and the F2 score).
 
 `greybox_predictions.r` and `blackbox_predictions.r`
 just run the model on maliciously crafted input
-(in `greybox_csv` and `blackbox_csv`)
 and print the results.
+For the input files, see the project root.
 
 `model_poisoning.r`, however, is specific to Ranger and R.
 After analysing the inner workings of Ranger,

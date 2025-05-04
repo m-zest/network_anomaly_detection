@@ -1,6 +1,6 @@
 source('train_on_partial_binarised.r', local = TRUE)
 
-evasion_records_fname <- 'greybox_csv/greybox.csv'
+evasion_records_fname <- '../evasion_records.csv'
 
 evasion_records <- read.csv(evasion_records_fname)
 evasion_pred <- predict(rf_model, data = evasion_records)
