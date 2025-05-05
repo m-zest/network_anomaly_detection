@@ -8,6 +8,15 @@ The goal is to detect cyber-attacks (e.g., DoS, Exploits, Reconnaissance, etc.) 
 
 ---
 
+##  Contributors
+
+- Zeeshan Mohammad  (HDGLIT)
+- Abed Al Hadi Ali (YTUK16)
+- Bailey Kelen (M1B10W)
+- Csimma Viktor (MIDFFJ)
+- Ottó Panna (ITFPBP)
+
+
 ## 🗂️ Project Structure
 
 ```
