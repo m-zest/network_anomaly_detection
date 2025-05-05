@@ -1,0 +1,3 @@
+sport,dport,proto,state,dur,sbytes,spkts
+49722,80,tcp,CON,1.239043,188,3
+49724,80,tcp,CON,1.218824,188,3
