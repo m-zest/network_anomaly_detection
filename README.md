@@ -2,7 +2,7 @@
 
 # 🛡️ Network Traffic Anomaly Detection
 
-This project provides a comprehensive pipeline to detect anomalies in network traffic using machine learning classifiers. It includes a **Flask API** for live predictions and multiple algorithmic experiments ranging from **Random Forest**, **Ranger**, to **other classifiers**.
+This project provides a comprehensive pipeline to detect anomalies in network traffic using machine learning classifiers. It includes a **Flask API** for live predictions and multiple algorithmic experiments ranging from **Random Forest**, **Ranger**, to **other classifiers**. The project also includes some successful evasion experiments as a grey-box, white-box, and black-box.
 
 The goal is to detect cyber-attacks (e.g., DoS, Exploits, Reconnaissance, etc.) or normal behavior based on network traffic features.
 
@@ -25,9 +25,9 @@ network_anomaly_detection/
 ├── RF_Classifier_with_SMOTE/     # Flask API using RandomForestClassifier
 ├── ranger/                       # Experiments with Ranger (efficient RF variant)
 ├── other_algos/                  # SVM, XGBoost, Logistic Regression, etc.
-├── blackbox/                     # Black-box testing/attacks
-├── greybox/                      # Grey-box techniques
-├── whitebox/                     # White-box explainability techniques
+├── blackbox/                     # Black-box attacks
+├── greybox/                      # Grey-box attacks
+├── whitebox/                     # White-box attacks
 ├── training_data/                # Raw/preprocessed datasets
 ├── netflow_evasion_report.pdf    # Report explaining methodology and results
 ├── netflow_evasion_presentation.pdf # Presentation slides
@@ -44,6 +44,7 @@ network_anomaly_detection/
 
    * Trained a `RandomForestClassifier` using SMOTE to handle class imbalance.
    * Deployed using a **Flask API** to serve real-time predictions.
+   * pkl file is included
 
 2. **`ranger/`**
 
