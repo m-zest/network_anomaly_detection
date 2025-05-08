@@ -284,3 +284,19 @@ with much less probability).
 
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file.
 
+## Resources
+
+Netflow MSc Thesis: https://github.com/kahramankostas/Anomaly-Detection-in-Networks-Using-Machine-Learning
+
+Netflow Research Paper: https://www.sciencedirect.com/science/article/pii/S2452414X23000390
+
+RF Ranger Tool : https://github.com/imbs-hl/ranger
+
+Project Data: https://unsw-my.sharepoint.com/personal/z5025758_ad_unsw_edu_au/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fz5025758%5Fad%5Funsw%5Fedu%5Fau%2FDocuments%2FUNSW%2DNB15%20dataset%2FCSV%20Files
+
+RF Algorithm: https://scikitlearn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+
+Nmap: https://nmap.org
+
+
+
