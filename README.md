@@ -36,9 +36,9 @@ network_anomaly_detection/
 
 ---
 
-## 🧠 Approach Overview
+##  Approach Overview
 
-### ✅ Step-by-Step Model Exploration
+###  Step-by-Step Model Exploration
 
 1. **`RF_Classifier_with_SMOTE/`**
 
@@ -63,9 +63,9 @@ network_anomaly_detection/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
-### ✅ Prerequisites
+###  Prerequisites
 
 * Python 3.6 or higher
 * `pip` (Python package installer)
