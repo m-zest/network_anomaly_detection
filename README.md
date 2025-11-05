@@ -17,7 +17,7 @@ The goal is to detect cyber-attacks (e.g., DoS, Exploits, Reconnaissance, etc.) 
 
 
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 network_anomaly_detection/
@@ -72,7 +72,7 @@ network_anomaly_detection/
 
 ---
 
-### 🔧 Installation
+###  Installation
 
 1. **Clone the repository**
 
@@ -104,18 +104,18 @@ network_anomaly_detection/
 
 ---
 
-## 🖥️ Running the API
+##  Running the API
 
 ```bash
 python app.py
 ```
 
 The Flask app will run on:
-📍 `http://127.0.0.1:5000/`
+ `http://127.0.0.1:5000/`
 
 ---
 
-## 📡 API Endpoint
+## API Endpoint
 
 ### `POST /predict`
 
@@ -146,7 +146,7 @@ Send a JSON payload representing a network traffic sample.
 > Class `1` corresponds to a label  `'Exploits'`.
 ---
 
-## 🔍 Testing the API
+##  Testing the API
 
 ### With Postman:
 
@@ -254,7 +254,7 @@ with or without the magic sport value
 with much less probability).
 
 
-## 📊 Algorithm Comparisons
+##  Algorithm Comparisons
 
 | Classifier            | Accuracy | F1 Score | Notes                       |
 | --------------------- | -------- | -------- | --------------------------- |
@@ -266,10 +266,10 @@ with much less probability).
 
 ---
 
-## 📁 Additional Reports
+## Additional Reports
 
-* 📘 `netflow_evasion_report.pdf`: Detailed report on methods, results, and evasion tactics.
-* 🖼️ `netflow_evasion_presentation.pdf`: Slides summarizing the project.
+*  `netflow_evasion_report.pdf`: Detailed report on methods, results, and evasion tactics.
+*  `netflow_evasion_presentation.pdf`: Slides summarizing the project.
 
 
 
@@ -277,13 +277,13 @@ with much less probability).
 
 ### Attack Scenarios Overview
 
-**🔍 White-box Evasion:**
+** White-box Evasion:**
 In this scenario, the attacker has full access to the training data and model structure. This allows them to manipulate features and poison the dataset or model directly. Techniques included injecting mislabeled samples, introducing "magic ports" to trigger false negatives, and corrupting model logic by modifying binary files — making all malicious traffic appear normal.
 
-**🕵️ Grey-box Evasion:**
+** Grey-box Evasion:**
 Here, the attacker has limited knowledge — access to training data statistics but not the model itself. Using calculated averages (e.g., source packets on specific ports), attackers crafted or modified flows to blend with legitimate traffic patterns, successfully evading detection in several cases.
 
-**🎭 Black-box Evasion:**
+** Black-box Evasion:**
 With no access to model internals or training data, attackers relied on external tools like Nmap to simulate real-world reconnaissance (e.g., stealth scans). Captured traffic was converted to NetFlow format. Notably, stealthy scans often bypassed detection entirely, especially when using low-interaction techniques like SYN scans with version suppression.
 
 
@@ -296,9 +296,6 @@ With no access to model internals or training data, attackers relied on external
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file.
 
 ## Resources
 
